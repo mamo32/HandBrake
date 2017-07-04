@@ -4683,7 +4683,7 @@ int hb_subtitle_add_ssa_header(hb_subtitle_t *subtitle, const char *font,
         "\r\n"
         "[V4+ Styles]\r\n"
         "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\r\n"
-        "Style: Default,%s,%d,&H00FFFFFF,&H00FFFFFF,&H000F0F0F,&H000F0F0F,0,0,0,0,100,100,0,0.00,1,2,3,2,20,20,20,0\r\n";
+        "Style: Default,%s,%d,&H0000FFFF,&H0000FFFF,&H000F0F0F,&H00000000,0,0,0,0,100,100,0,0.00,1,2,3,2,20,20,20,0\r\n";
 
     subtitle->extradata = (uint8_t*)hb_strdup_printf(ssa_header, w, h, font, fs);
     if (subtitle->extradata == NULL)
